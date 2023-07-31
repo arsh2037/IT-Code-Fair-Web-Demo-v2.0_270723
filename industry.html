@@ -143,7 +143,7 @@
                     </div>
                     
                     <div class="message-button">
-                        <button type="submit" class="hero-blue-button blue-button">Send Message</button>
+                        <button type="submit"  onclick="Sent()" class="hero-blue-button blue-button">Send Message</button>
                     </div>
                     
                 </form>
@@ -210,7 +210,10 @@
     
     <!-- JAVASCRIPT -->
     <script>
-        // Toggling menu
+        function Sent()
+{
+    prompt("Message Sent");
+}        // Toggling menu
         var navLinks = document.getElementById("navLinks");            
         function showMenu(){
             navLinks.style.right = "0";               
