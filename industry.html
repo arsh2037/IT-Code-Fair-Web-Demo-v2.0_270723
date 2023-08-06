@@ -104,39 +104,49 @@
             <div class="contact-column">
                 <h3>Contact Us</h3>
                 <p>For more information, please contact us through email or through the form below.</p>
-                <form class="industry-contact-form" action="forms.php" method="post">
+                <form class="industry-contact-form" action="https://formsubmit.co/itcodefair@cdu.edu.au" method="post">
                     <input type="text" name="name" placeholder="Enter Your Name" required>
-                    <input type="email" name="business_unit" placeholder="Enter Your Organisation/Business unit" required>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="email" name="organization" placeholder="Enter Your Organisation/Business unit" requiM red>
                     <input type="text" name="email" placeholder="Enter Your Email" required>
+                    
                     <p style="color: #211545;">You are potentially interested in:</p>
+                    
+                    <!-- CHECKBOX -->
                     <div class="checkbox-container">
                         <label class="checkbox-label">
-                            <input type="checkbox" name="interest[]" class="checkbox-input" value="being a sponsor">
+                            <input type="checkbox" name="being a sponsor" class="checkbox-input">
                             <span class="checkbox-custom"></span>
                             <span class="checkbox-text">being a sponsor.</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="interest[]" class="checkbox-input" value="being a judge">
+                            <input type="checkbox" name="being a judge" class="checkbox-input">
                             <span class="checkbox-custom"></span>
                             <span class="checkbox-text">being a judge.</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="interest[]" class="checkbox-input" value="being an interviewer in the employer speed dating">
+                            <input type="checkbox" name="being an interviewer in the employer speed dating" class="checkbox-input">
                             <span class="checkbox-custom"></span>
                             <span class="checkbox-text">being an interviewer in the employer speed dating.</span>
                         </label>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="interest[]" class="checkbox-input" value="proposing a project">
+                            <input type="checkbox" name="proposing a project" class="checkbox-input">
                             <span class="checkbox-custom"></span>
                             <span class="checkbox-text">proposing a project.</span>
                         </label>
                     </div>
-                    <div class="message-box">
-                        <textarea name="message" rows="8" placeholder="Enter your Message" required></textarea>
+                    
+
+                    <!-- MESSAGE BOX -->
+                    <di class="message-box">
+                        <input type="text" rows="8" placeholder="Enter your Message" name="message"  required >
+                        
                     </div>
+                    
                     <div class="message-button">
-                        <button type="submit" class="hero-blue-button blue-button">Send Message</button>
+                        <button type="submit"  onclick="Sent()" class="hero-blue-button blue-button">Send Message</button>
                     </div>
+                    
                 </form>
                 
                     
@@ -201,7 +211,10 @@
     
     <!-- JAVASCRIPT -->
     <script>
-        // Toggling menu
+        function Sent()
+{
+    alert("Message Sent");
+}        // Toggling menu
         var navLinks = document.getElementById("navLinks");            
         function showMenu(){
             navLinks.style.right = "0";               
